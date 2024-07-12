@@ -33,7 +33,7 @@
 003400140528           ytotc = *zeros ;
 003500140530           ybarcode = stringa ;
 
-003700140530     c                   moveA     ybarcode      ybarcod
+003700140530        ybarcod = ybarcode ;     
 
 003900140528           for y = 1 to 17;
 004000140528
