@@ -14,7 +14,35 @@
 000018110613     D DATA            C                   CONST('0001-01-01')
 000019120606     D YSOC            S              3
 0001001106131705  *---------------------------------------------------------                *
-000117110613      /free
+ create table clv1.table_1 (
+    field1 varchar(5) not nul default ' '
+    field2 varchar(20) not nul default ' '
+    field3 varchar(50) not nul default ' ' );
+    
+    create table clv1.table_2 (
+    field1 varchar(30) not nul default ' '
+    field2 varchar(30) not nul default ' '
+    field3 varchar(30) not nul default ' ' );
+    
+    insert into clv1.table_1 values ('A', 'B', 'C') ;
+    insert into clv1.table_1 values ('B', 'C', 'D') ;
+    insert into clv1.table_1 values ('C', 'D', 'E') ;
+    
+    select * from clv1.tabel1_1 ;
+    
+    insert into clv1.table_2 values ('A', 'B', 'C') ;
+    insert into clv1.table_2 values ('D', 'E', 'F') ;
+    insert into clv1.table_2 values ('C', 'D', 'E') ;
+    
+     select * from clv1.tabel1_2 ;
+     
+  select * from clv1.table_1   except select * fromclv1.table_2 ;
+  
+  select * from clv1.table_2   except select * fromclv1.table_1 ;  
+     
+insert into clv1.table_2  (select * from clv1.table_1 except select * from clv1.table_2) ;   
+     
+     select * from clv1.table_1   except select * fromclv1.table_2 ;
 000118110613           If *in99 = '0'  ;
 000119110613              eval Ysoc = '001' ;
 000120110613              eval *in99 = '1'  ;
