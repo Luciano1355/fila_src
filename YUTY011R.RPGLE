@@ -24,13 +24,7 @@
 000121110613           endif ;
 000122110613           uno = *zeros ;
 000123110613
-000124110926               chain (Ysoc: codice) Anapf000 ;
-000125110613                if  %found(anapf01l) ;
-000126110926                   if desbreve <> *blanks ;
-000127110926                     Apfdes = desbreve ;
-000128110926                     update anapf000 ;
-000129110926                     uno =  1  ;
-000130110926                   endif ;
+000124110926          👍(❁´◡`❁)
 000131110926
 000132110926                 if deseste <> *blanks ;
 000133110926                  chain (Ysoc: '011': codice) Antcm000 ;
